@@ -1,170 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="en" id="theme">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="vendors/linericon/style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-    <!-- main css -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/favicon.png" type="image/png"> <!-- Favicon for the page -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Contact | Aman Kumar</title>
     <style>
+        /* Default (Dark Mode) Styles */
         body {
             font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+        h1, p {
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+        }
+
+        .contact {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact h1 {
+            font-size: 2.5em;
+        }
+
+        .contact p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #444;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Light Mode Styles */
+        body.light-mode {
+            background-color: #f4f4f4;
             color: #333;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        .navbar.light-mode {
+            background-color: #fff;
         }
 
-        h1 {
-            text-align: center;
-            font-size: 2.5em;
-            color: #2c3e50;
-            margin-bottom: 20px;
+        .navbar.light-mode a {
+            color: #333;
         }
 
-        .section-title {
-            font-size: 1.4em;
-            color: #34495e;
-            margin-top: 20px;
-            text-align: center;
+        .button.light-mode {
+            background-color: #ddd;
+            color: #333;
         }
 
-        .contact-info {
-            margin: 20px 0;
+        .button.light-mode:hover {
+            background-color: #bbb;
         }
 
-        .contact-info p {
-            font-size: 1.1em;
-            text-align: center;
-        }
-
-        .social-links {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-        }
-
-        .social-links li {
-            margin: 10px;
-        }
-
-        .social-links a {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background-color: #3498db;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 50px;
-            font-size: 1.8em;
-            color: white;
-            transition: background-color 0.3s;
-        }
-
-        .social-links a:hover {
-            background-color: #2980b9;
-        }
-
-        .social-links i {
-            margin-top: 8px;
-        }
-
-        p {
-            font-size: 1.1em;
-            text-align: center;
+        .light-mode .mode-toggle {
+            color: #333;
         }
     </style>
 </head>
-
 <body>
 
-    <!--================ Start Header Area =================-->
-    <header class="header_area">
-        <div class="main_menu">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav menu_nav justify-content-end">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <!--================ End Header Area =================-->
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+    </div>
 
-    <!--================ Start Contact Area =================-->
-    <section class="contact_area section_gap">
-        <div class="container">
-            <h1>Contact</h1>
-            <p>Feel free to reach out via email or social media.</p>
-
-            <div class="contact-info">
-                <div class="section-title">Email:</div>
-                <p>k[dot]amanknp[at]gmail[dot]com</p>
-                <p>kaman21[at]iitk[dot]ac[dot]in</p>
-            </div>
-
-            <div class="contact-info">
-                <div class="section-title">Social Media:</div>
-                <ul class="social-links">
-                    <li><a href="https://www.linkedin.com/in/aman-kumar-074116228/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="https://twitter.com/kempeonmars" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://www.instagram.com/hmm_aman_" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="https://github.com/amaniitk" target="_blank"><i class="fa fa-github"></i></a></li>
-                </ul>
-            </div>
-        </div>
+    <!-- Contact Section -->
+    <section class="contact">
+        <h1>Contact Me</h1>
+        <p>If you want to get in touch, feel free to email me at <a href="mailto:k.amanknp@gmail.com">k.amanknp@gmail.com</a></p>
+        <p>Or you can connect with me on <a href="https://www.linkedin.com/in/aman-kumar-1234" target="_blank">LinkedIn</a>.</p>
+        <a href="mailto:k.amanknp@gmail.com" class="button">Send an Email</a>
     </section>
-    <!--================ End Contact Area =================-->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/stellar.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-    <script src="vendors/isotope/isotope-min.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/mail-script.js"></script>
-    <!--gmaps Js-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-    <script src="js/gmaps.min.js"></script>
-    <script src="js/theme.js"></script>
+    <!-- Mode Toggle Button -->
+    <button class="mode-toggle" id="mode-toggle">
+        <i class="fa fa-moon"></i>
+    </button>
+
+    <script>
+        // Dark mode toggle functionality (same as index.html)
+        const themeToggle = document.getElementById('mode-toggle');
+        const body = document.body;
+        const theme = document.documentElement;
+
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-mode');
+            theme.classList.add('light-mode');
+        } else {
+            body.classList.remove('light-mode');
+            theme.classList.remove('light-mode');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            theme.classList.toggle('light-mode');
+
+            if (body.classList.contains('light-mode')) {
+                localStorage.setItem('theme', 'light');
+            } else {
+                localStorage.setItem('theme', 'dark');
+            }
+
+            const icon = themeToggle.querySelector('i');
+            icon.classList.toggle('fa-sun');
+            icon.classList.toggle('fa-moon');
+        });
+    </script>
+
 </body>
-
 </html>
