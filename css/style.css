@@ -7,7 +7,6 @@ body {
   line-height: 1.6;
 }
 
-/* Hero Section */
 #hero {
   height: 100vh;
   position: relative;
@@ -32,6 +31,11 @@ h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
   color: #ffffff;
+  transition: text-shadow 0.3s ease;
+}
+
+h1:hover {
+  text-shadow: 0 0 10px #7c4dff;
 }
 
 #tagline {
@@ -39,7 +43,6 @@ h1 {
   color: #b0b0b0;
 }
 
-/* Buttons */
 .button, .section-button, .nav-button {
   display: inline-block;
   padding: 15px 30px;
@@ -54,8 +57,7 @@ h1 {
 }
 
 .button:hover, .section-button:hover, .nav-button:hover {
-  background-color: #5e35b1;
-  transform: scale(1.1) rotate(2deg);
+  transform: scale(1.1);
   box-shadow: 0 0 20px rgba(124, 77, 255, 0.8);
 }
 
@@ -63,28 +65,31 @@ h1 {
   margin-top: 2rem;
 }
 
-/* Navigation */
 nav {
   position: fixed;
   top: 20px;
   right: 20px;
 }
 
-/* Sections */
 .section {
   padding: 50px;
   text-align: center;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.section.visible {
+.blog-content, form {
+  display: block;
   opacity: 1;
-  transform: translateY(0);
+  visibility: visible;
+  margin-top: 20px;
 }
 
-/* Form */
+article {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -106,7 +111,6 @@ input, textarea {
   border-radius: 5px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
