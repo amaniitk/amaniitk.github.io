@@ -1,21 +1,21 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #0a0a0a;
   color: #ffffff;
   line-height: 1.6;
   overflow-x: hidden;
 }
 
-/* Particle Background */
+/* Stellar Particle Background */
 #particles-js {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Behind content */
+  z-index: -1;
 }
 
 /* Hero Section */
@@ -31,52 +31,60 @@ body {
 
 .hero-content {
   z-index: 10;
+  padding: 20px;
 }
 
 .title {
-  font-size: 4rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4.5rem;
   color: #7c4dff;
-  text-shadow: 0 0 20px #7c4dff, 0 0 30px rgba(124, 77, 255, 0.5);
+  text-shadow: 0 0 25px #7c4dff, 0 0 40px rgba(124, 77, 255, 0.5);
   animation: glitch 2s linear infinite;
+  margin-bottom: 20px;
 }
 
 .tagline {
   font-size: 1.8rem;
   color: #b0b0b0;
-  margin: 20px 0;
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-in;
 }
 
 /* Buttons */
 .button, .nav-button {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 15px 35px;
   background: linear-gradient(45deg, #7c4dff, #00ff00);
   color: #ffffff;
   text-decoration: none;
   border-radius: 50px;
   font-size: 1.2rem;
   margin: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
   box-shadow: 0 0 15px rgba(124, 77, 255, 0.7);
+  font-family: 'Orbitron', sans-serif;
 }
 
 .button:hover, .nav-button:hover {
   transform: scale(1.1) rotate(2deg);
-  box-shadow: 0 0 25px rgba(124, 77, 255, 1);
+  box-shadow: 0 0 30px rgba(124, 77, 255, 1);
+  background: linear-gradient(45deg, #5e35b1, #00cc00);
 }
 
 /* Navigation */
-nav {
+.nav-menu {
   position: fixed;
   top: 20px;
   right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .nav-button {
-  display: block;
-  margin: 10px 0;
   background: #2a2a2a;
   border: 2px solid #7c4dff;
+  padding: 10px 20px;
 }
 
 .nav-button:hover {
@@ -88,6 +96,11 @@ nav {
   2%, 64% { transform: translate(2px, 0) skew(0deg); }
   4%, 60% { transform: translate(-2px, 0) skew(0deg); }
   62% { transform: translate(0, 0) skew(5deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Custom Cursor */
