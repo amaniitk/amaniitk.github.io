@@ -9,13 +9,17 @@ body {
   color: #ffffff;
   line-height: 1.6;
   overflow-x: hidden;
-  /* Custom Cursor */
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="5" fill="rgba(124, 77, 255, 0.8)"/></svg>') 10 10, auto;
 }
 
 html {
   scroll-behavior: smooth;
 }
+
+/* Optional custom cursor
+body {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="5" fill="rgba(124, 77, 255, 0.8)"/></svg>') 10 10, auto;
+}
+*/
 
 /* ------------------------------------------------------
    PARTICLES BACKGROUND
@@ -44,8 +48,8 @@ html {
 
 .nav-button {
   display: inline-block;
-  background: #2a2a2a;
-  border: 2px solid #7c4dff;
+  background: #1a1a1a;
+  border: 1px solid #7c4dff;
   padding: 10px 20px;
   color: #ffffff;
   text-decoration: none;
@@ -53,13 +57,13 @@ html {
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-  box-shadow: 0 0 15px rgba(124, 77, 255, 0.7);
+  box-shadow: 0 0 10px rgba(124, 77, 255, 0.4);
 }
 
 .nav-button:hover {
-  transform: scale(1.1) rotate(2deg);
-  box-shadow: 0 0 30px rgba(124, 77, 255, 1);
-  background: #7c4dff;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(124, 77, 255, 0.7);
+  background: #2f2f2f;
 }
 
 /* ------------------------------------------------------
@@ -73,7 +77,6 @@ html {
   align-items: center;
   text-align: center;
   position: relative;
-  overflow: hidden;
 }
 
 .hero-content {
@@ -84,39 +87,39 @@ html {
 
 .title {
   font-family: 'Orbitron', sans-serif;
-  font-size: 4.5rem;
-  color: #7c4dff;
-  text-shadow: 0 0 25px #7c4dff, 0 0 40px rgba(124, 77, 255, 0.5);
-  animation: glitch 2s linear infinite;
+  font-size: 4rem;
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
   margin-bottom: 20px;
+  animation: glitch 2s linear infinite;
 }
 
 .tagline {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #b0b0b0;
   margin-bottom: 30px;
   animation: fadeIn 1s ease-in;
 }
 
-/* Buttons */
-.button, .nav-button {
+/* Buttons (Hero) */
+.button {
   display: inline-block;
   padding: 15px 35px;
-  background: linear-gradient(45deg, #7c4dff, #00ff00);
+  background: linear-gradient(45deg, #7c4dff, #4a288c);
   color: #ffffff;
   text-decoration: none;
   border-radius: 50px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 10px;
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-  box-shadow: 0 0 15px rgba(124, 77, 255, 0.7);
+  box-shadow: 0 0 10px rgba(124, 77, 255, 0.5);
   font-family: 'Orbitron', sans-serif;
 }
 
 .button:hover {
-  transform: scale(1.1) rotate(2deg);
-  box-shadow: 0 0 30px rgba(124, 77, 255, 1);
-  background: linear-gradient(45deg, #5e35b1, #00cc00);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(124, 77, 255, 0.7);
+  background: linear-gradient(45deg, #9b6eff, #5c2a99);
 }
 
 /* ------------------------------------------------------
@@ -124,14 +127,14 @@ html {
 ------------------------------------------------------ */
 .scroll-down {
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
+  color: #b0b0b0;
   animation: bounce 2s infinite;
-  color: #7c4dff;
 }
 
 .scroll-down span {
@@ -142,8 +145,8 @@ html {
   margin: 10px auto;
   width: 24px;
   height: 24px;
-  border-left: 3px solid #7c4dff;
-  border-bottom: 3px solid #7c4dff;
+  border-left: 2px solid #b0b0b0;
+  border-bottom: 2px solid #b0b0b0;
   transform: rotate(-45deg);
 }
 
@@ -164,7 +167,7 @@ html {
 ------------------------------------------------------ */
 #about {
   padding: 100px 20px;
-  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  background: #0a0a0a;
   text-align: center;
 }
 
@@ -175,7 +178,7 @@ html {
 
 #about h2 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   color: #7c4dff;
 }
@@ -186,7 +189,7 @@ html {
 }
 
 /* ------------------------------------------------------
-   BLOG PAGE STYLES
+   BLOG PAGE
 ------------------------------------------------------ */
 #blog {
   padding: 100px 20px;
@@ -197,7 +200,14 @@ html {
   font-family: 'Orbitron', sans-serif;
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #7c4dff;
+  color: #ffffff;
+}
+
+/* Glitch effect for the blog title */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+  animation: glitch-alt 2s infinite;
 }
 
 /* Intro Text */
@@ -215,7 +225,7 @@ html {
 
 /* Blog Card */
 .blog-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 30px;
@@ -228,7 +238,7 @@ html {
 .card-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.8rem;
-  color: #7c4dff;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
@@ -257,11 +267,11 @@ html {
 
 /* Read More Button */
 .read-more {
-  background: linear-gradient(45deg, #7c4dff, #00ff00);
+  background: #1a1a1a;
+  border: 1px solid #7c4dff;
   color: #fff;
-  border: none;
-  padding: 10px 20px;
   border-radius: 30px;
+  padding: 10px 20px;
   font-family: 'Orbitron', sans-serif;
   cursor: pointer;
   margin-top: 10px;
@@ -270,11 +280,11 @@ html {
 
 .read-more:hover {
   transform: scale(1.05);
-  background: linear-gradient(45deg, #5e35b1, #00cc00);
+  background: #2f2f2f;
 }
 
 /* ------------------------------------------------------
-   CONTACT PAGE STYLES
+   CONTACT PAGE
 ------------------------------------------------------ */
 #contact {
   min-height: 100vh;
@@ -287,14 +297,14 @@ html {
   font-family: 'Orbitron', sans-serif;
   font-size: 3rem;
   margin-bottom: 30px;
-  color: #7c4dff;
+  color: #ffffff;
 }
 
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
   padding: 40px;
   border-radius: 10px;
 }
@@ -321,15 +331,15 @@ html {
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: 2px solid #7c4dff;
-  background: #222;
+  background: #2a2a2a;
 }
 
 .section-button {
   display: inline-block;
   padding: 15px 30px;
-  background: linear-gradient(45deg, #7c4dff, #00ff00);
+  background: #1a1a1a;
+  border: 1px solid #7c4dff;
   color: #fff;
-  border: none;
   border-radius: 30px;
   font-size: 1rem;
   font-family: 'Orbitron', sans-serif;
@@ -339,7 +349,7 @@ html {
 
 .section-button:hover {
   transform: scale(1.05);
-  background: linear-gradient(45deg, #5e35b1, #00cc00);
+  background: #2f2f2f;
 }
 
 /* ------------------------------------------------------
@@ -349,8 +359,8 @@ html {
   display: inline-block;
   margin-top: 40px;
   padding: 15px 30px;
-  background: #2a2a2a;
-  border: 2px solid #7c4dff;
+  background: #1a1a1a;
+  border: 1px solid #7c4dff;
   color: #fff;
   text-decoration: none;
   border-radius: 30px;
@@ -358,24 +368,58 @@ html {
 }
 
 .back-button:hover {
-  background: #7c4dff;
+  transform: scale(1.05);
+  background: #2f2f2f;
 }
 
 /* ------------------------------------------------------
    ANIMATIONS
 ------------------------------------------------------ */
+/* Title glitch (Hero) */
 @keyframes glitch {
-  2%, 64% {
-    transform: translate(2px, 0) skew(0deg);
+  0% {
+    text-shadow: 2px 0 #7c4dff, -2px 0 #ffffff;
   }
-  4%, 60% {
-    transform: translate(-2px, 0) skew(0deg);
+  20% {
+    text-shadow: -2px 0 #7c4dff, 2px 0 #ffffff;
   }
-  62% {
-    transform: translate(0, 0) skew(5deg);
+  40% {
+    text-shadow: 2px 0 #7c4dff, -2px 0 #ffffff;
+  }
+  60% {
+    text-shadow: -2px 0 #7c4dff, 2px 0 #ffffff;
+  }
+  80% {
+    text-shadow: 2px 0 #7c4dff, -2px 0 #ffffff;
+  }
+  100% {
+    text-shadow: -2px 0 #7c4dff, 2px 0 #ffffff;
   }
 }
 
+/* Glitch for blog/contact headings */
+@keyframes glitch-alt {
+  0% {
+    text-shadow: 2px 0 #7c4dff, -2px 0 #ffffff;
+  }
+  20% {
+    text-shadow: -2px 0 #7c4dff, 2px 0 #ffffff;
+  }
+  40% {
+    text-shadow: 2px 0 #7c4dff, -2px 0 #ffffff;
+  }
+  60% {
+    text-shadow: -2px 0 #7c4dff, 2px 0 #ffffff;
+  }
+  80% {
+    text-shadow: 2px 0 #7c4dff, -2px 0 #ffffff;
+  }
+  100% {
+    text-shadow: -2px 0 #7c4dff, 2px 0 #ffffff;
+  }
+}
+
+/* Fade in (Tagline) */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -384,33 +428,5 @@ html {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* Glitch for headings on Blog & Contact (slightly different) */
-.glitch-text {
-  position: relative;
-  display: inline-block;
-  animation: glitch-alt 2s infinite;
-}
-
-@keyframes glitch-alt {
-  0% {
-    text-shadow: 2px 0 #7c4dff, -2px 0 #00ff00;
-  }
-  20% {
-    text-shadow: -2px 0 #7c4dff, 2px 0 #00ff00;
-  }
-  40% {
-    text-shadow: 2px 0 #7c4dff, -2px 0 #00ff00;
-  }
-  60% {
-    text-shadow: -2px 0 #7c4dff, 2px 0 #00ff00;
-  }
-  80% {
-    text-shadow: 2px 0 #7c4dff, -2px 0 #00ff00;
-  }
-  100% {
-    text-shadow: -2px 0 #7c4dff, 2px 0 #00ff00;
   }
 }
