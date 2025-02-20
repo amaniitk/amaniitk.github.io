@@ -90,4 +90,61 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
     });
   }
+    if (document.querySelector('#blog')) {
+    // Animate the blog title and intro text
+    gsap.from('.blog-title', {
+      duration: 1.5,
+      y: -50,
+      opacity: 0,
+      ease: 'power3.out'
+    });
+    gsap.from('.intro-text', {
+      duration: 1,
+      x: -50,
+      opacity: 0,
+      delay: 0.5,
+      ease: 'power2.out'
+    });
+    gsap.from('.blog-card', {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      stagger: 0.2,
+      delay: 0.8,
+      ease: 'power2.out'
+    });
+
+    // Read More toggle functionality
+    const readMoreButtons = document.querySelectorAll('.read-more');
+    readMoreButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const cardFull = button.previousElementSibling; // .card-full
+        cardFull.classList.toggle('hidden');
+        if (cardFull.classList.contains('hidden')) {
+          button.textContent = 'Read More';
+        } else {
+          button.textContent = 'Show Less';
+        }
+      });
+    });
+  }
+
+  // Check if we're on the Contact page
+  if (document.querySelector('#contact')) {
+    // Animate the contact title and form
+    gsap.from('.contact-title', {
+      duration: 1.5,
+      y: -50,
+      opacity: 0,
+      ease: 'power3.out'
+    });
+    gsap.from('.contact-form', {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      delay: 0.5,
+      ease: 'power2.out'
+    });
+  }
+});
 });
