@@ -16,12 +16,13 @@ body {
   text-align: center;
 }
 #particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: absolute;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Keeps it behind other content */
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #000000; /* Adjust as needed */
 }
 
 .hero-content {
