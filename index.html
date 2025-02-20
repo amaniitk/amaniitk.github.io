@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Space</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <!-- Link to the single, combined stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Google Fonts: Orbitron (titles), Roboto (body) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
-  <!-- Stellar Particle Background -->
+  <!-- Particle Background -->
   <div id="particles-js"></div>
+
+  <!-- Navigation -->
+  <nav class="nav-menu">
+    <a href="blog.html" class="nav-button">Blog</a>
+    <a href="contact.html" class="nav-button">Contact</a>
+  </nav>
 
   <!-- Hero Section -->
   <section id="hero">
     <div class="hero-content">
       <h1 class="title">Welcome to My Space</h1>
-      <!-- Tagline will be dynamically typed -->
       <p id="tagline" class="tagline"></p>
+
       <div class="button-container">
-        <a href="https://drive.google.com/file/d/1h2Fg1mIisHburRiIf6tZXcThBkhT70zc/view?usp=sharing" class="button" target="_blank">View Resume</a>
-        <a href="https://topmate.io/aman_iitkanpur" class="button">Visit My Other Site</a>
+        <a
+          href="https://drive.google.com/file/d/1h2Fg1mIisHburRiIf6tZXcThBkhT70zc/view?usp=sharing"
+          class="button"
+          target="_blank"
+          >View Resume</a
+        >
+        <a href="https://topmate.io/aman_iitkanpur" class="button" target="_blank"
+          >Visit My Other Site</a
+        >
       </div>
-      <!-- Scroll Down Arrow -->
+
+      <!-- Scroll Down Instruction -->
       <div class="scroll-down">
-        <span>Scroll Down</span>
+        <span>Scroll</span>
         <div class="arrow"></div>
       </div>
     </div>
@@ -31,20 +50,15 @@
 
   <!-- About Section -->
   <section id="about">
-    <div class="content">
+    <div class="about-content">
       <h2>About Me</h2>
       <p>
-        I'm a creative mind with a passion for design, coding, and innovation.
-        Dive in to explore my world of dynamic creations and interactive experiences.
+        Hello! I'm a passionate fourth-year undergraduate at IIT Kanpur, driven by
+        curiosity and the thrill of exploration. Dive in to learn more about my work,
+        my inspirations, and what makes me tick.
       </p>
     </div>
   </section>
-
-  <!-- Navigation -->
-  <nav class="nav-menu">
-    <a href="/blog.html" class="nav-button">Blog</a>
-    <a href="/contact.html" class="nav-button">Contact</a>
-  </nav>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
