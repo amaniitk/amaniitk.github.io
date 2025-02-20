@@ -10,6 +10,216 @@ body {
   transition: background-color 0.3s ease;
 }
 
+/* ---------------------------------
+   BLOG PAGE STYLES
+--------------------------------- */
+
+/* Blog Section */
+#blog {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.blog-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #7c4dff;
+}
+
+/* Intro Text */
+.intro-text {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  margin-bottom: 40px;
+}
+
+/* Blog Content Container */
+.blog-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Blog Card */
+.blog-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card Title */
+.card-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: #7c4dff;
+  margin-bottom: 10px;
+}
+
+/* Excerpt */
+.card-excerpt {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Full Text */
+.card-full {
+  color: #eee;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  transition: max-height 0.5s ease;
+}
+
+/* Hidden Class for Collapsed Text */
+.hidden {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Read More Button */
+.read-more {
+  background: linear-gradient(45deg, #7c4dff, #00ff00);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.read-more:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #5e35b1, #00cc00);
+}
+
+/* Back Button (shared for Blog & Contact) */
+.back-button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 15px 30px;
+  background: #2a2a2a;
+  border: 2px solid #7c4dff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background: #7c4dff;
+}
+
+/* ---------------------------------
+   CONTACT PAGE STYLES
+--------------------------------- */
+#contact {
+  min-height: 100vh;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.contact-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #7c4dff;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #b0b0b0;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #7c4dff;
+  background: #222;
+}
+
+.section-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background: linear-gradient(45deg, #7c4dff, #00ff00);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.section-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #5e35b1, #00cc00);
+}
+
+/* ---------------------------------
+   EXTRA EFFECTS
+--------------------------------- */
+
+/* Glitch Animation for Blog & Contact Titles */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+  animation: glitch 2s infinite;
+}
+
+/* If you want a slightly different glitch than the hero title, you can tweak here */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 0 #7c4dff, -2px 0 #00ff00;
+  }
+  20% {
+    text-shadow: -2px 0 #7c4dff, 2px 0 #00ff00;
+  }
+  40% {
+    text-shadow: 2px 0 #7c4dff, -2px 0 #00ff00;
+  }
+  60% {
+    text-shadow: -2px 0 #7c4dff, 2px 0 #00ff00;
+  }
+  80% {
+    text-shadow: 2px 0 #7c4dff, -2px 0 #00ff00;
+  }
+  100% {
+    text-shadow: -2px 0 #7c4dff, 2px 0 #00ff00;
+  }
+}
+
+
 /* Stellar Particle Background */
 #particles-js {
   position: fixed;
