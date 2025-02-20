@@ -5,24 +5,27 @@ body {
   background-color: #1a1a1a;
   color: #e0e0e0;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
+/* Particle Background */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Behind other content */
+}
+
+/* Hero Section */
 #hero {
   height: 100vh;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background-color: #000000; /* Adjust as needed */
+  position: relative;
 }
 
 .hero-content {
@@ -33,10 +36,6 @@ h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
   color: #ffffff;
-  transition: text-shadow 0.3s ease;
-}
-
-h1:hover {
   text-shadow: 0 0 10px #7c4dff;
 }
 
@@ -45,7 +44,8 @@ h1:hover {
   color: #b0b0b0;
 }
 
-.button, .section-button, .nav-button {
+/* Buttons */
+.button, .nav-button {
   display: inline-block;
   padding: 15px 30px;
   background-color: #7c4dff;
@@ -58,67 +58,19 @@ h1:hover {
   box-shadow: 0 0 10px rgba(124, 77, 255, 0.5);
 }
 
-.button:hover, .section-button:hover, .nav-button:hover {
+.button:hover, .nav-button:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px rgba(124, 77, 255, 0.8);
 }
 
-.button-container {
-  margin-top: 2rem;
-}
-
+/* Navigation */
 nav {
   position: fixed;
   top: 20px;
   right: 20px;
 }
 
-.section {
-  padding: 50px;
-  text-align: center;
-}
-
-.blog-content, form {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  margin-top: 20px;
-}
-
-article {
-  background-color: #2a2a2a;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-form {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-label {
-  display: block;
-  margin: 10px 0 5px;
-  color: #ffffff;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  background-color: #333;
-  border: none;
-  color: #e0e0e0;
-  border-radius: 5px;
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-  .button, .section-button, .nav-button {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
 }
