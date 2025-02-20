@@ -1,50 +1,33 @@
----
-layout: default
-title: Home
----
-
-<section id="hero">
-  <div id="particles-js"></div>
-  <div class="hero-content">
-    <h1>Welcome to My Space</h1>
-    <p id="tagline"></p>
-  </div>
-</section>
-
-<section id="about">
-  <h2>About Me</h2>
-  <p>Hey there! I’m a fourth-year undergrad at IIT Kanpur, passionate about tech, creativity, and chilling out. This site is my digital playground—stick around to explore my thoughts and projects!</p>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="project-grid">
-    <div class="project-card">
-      <h3>Project 1</h3>
-      <p>A cool thing I built. Check it out!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Space</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Hero Section with Particle Background -->
+  <section id="hero">
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <h1>Welcome to My Space</h1>
+      <p id="tagline"></p>
+      <div class="button-container">
+        <a href="/assets/resume.pdf" class="button" download>Download Resume</a>
+        <a href="https://your-other-website.com" class="button">Visit My Other Site</a>
+      </div>
     </div>
-    <div class="project-card">
-      <h3>Project 2</h3>
-      <p>Another awesome creation.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-  particlesJS('particles-js', {
-    particles: {
-      number: { value: 100 },
-      color: { value: '#7c4dff' },
-      shape: { type: 'circle' },
-      opacity: { value: 0.6 },
-      size: { value: 3 },
-      line_linked: { enable: true, distance: 120, color: '#7c4dff', opacity: 0.4, width: 1 },
-      move: { enable: true, speed: 3 }
-    },
-    interactivity: {
-      events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
-      modes: { repulse: { distance: 100 }, push: { particles_nb: 4 } }
-    }
-  });
-</script>
+  <!-- Navigation -->
+  <nav>
+    <a href="/blog.html" class="nav-button">Blog</a>
+    <a href="/contact.html" class="nav-button">Contact</a>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
