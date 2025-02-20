@@ -1,0 +1,4 @@
+title: Aman
+description: Fourth Year Undergraduate at IIT Kanpur
+url: "https://yourusername.amaniitk.io"
+baseurl: ""
