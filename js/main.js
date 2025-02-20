@@ -10,22 +10,14 @@ particlesJS('particles-js', {
   },
   interactivity: {
     detect_on: 'canvas',
-    events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true },
-    modes: { grab: { distance: 200, line_linked: { opacity: 0.7 } }, push: { particles_nb: 4 } }
-  }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const tagline = document.getElementById('tagline');
-  const text = 'Fourth Year Undergraduate at IIT Kanpur';
-  let index = 0;
-
-  function type() {
-    if (index < text.length) {
-      tagline.textContent += text.charAt(index);
-      index++;
-      setTimeout(type, 80);
+    events: { 
+      onhover: { enable: true, mode: 'grab' }, // Particles connect to mouse on hover
+      onclick: { enable: true, mode: 'push' }, // Optional: adds particles on click
+      resize: true 
+    },
+    modes: { 
+      grab: { distance: 200, line_linked: { opacity: 0.7 } }, // Lines connect to mouse
+      push: { particles_nb: 4 } 
     }
   }
-  type();
 });
