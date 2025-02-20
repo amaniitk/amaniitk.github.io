@@ -1,25 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
   // ----------------------------------------------------
-  // 1) PARTICLES BACKGROUND (applies to all pages that have #particles-js)
+  // 1) PARTICLES BACKGROUND
   // ----------------------------------------------------
   if (document.querySelector('#particles-js')) {
     particlesJS('particles-js', {
       particles: {
-        number: { value: 500, density: { enable: true, value_area: 800 } },
-        color: { value: '#7c4dff' },
-        shape: { type: 'star' },
-        opacity: { value: 0.9, random: true },
-        size: { value: 3, random: true },
+        number: { value: 300, density: { enable: true, value_area: 800 } },
+        color: { value: ['#ffffff', '#7c4dff'] },
+        shape: { type: 'circle' },
+        opacity: { value: 0.7, random: true },
+        size: { value: 2.5, random: true },
         line_linked: {
           enable: true,
-          distance: 80,
+          distance: 100,
           color: '#7c4dff',
-          opacity: 0.8,
+          opacity: 0.6,
           width: 1
         },
         move: {
           enable: true,
-          speed: 2,
+          speed: 1.5,
           direction: 'none',
           random: true,
           straight: false,
@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
           resize: true
         },
         modes: {
-          grab: { distance: 150, line_linked: { opacity: 1 } },
-          push: { particles_nb: 10 }
+          grab: { distance: 140, line_linked: { opacity: 1 } },
+          push: { particles_nb: 5 }
         }
       },
       retina_detect: true
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ----------------------------------------------------
-  // 2) INDEX PAGE / HERO SECTION (if #hero is present)
+  // 2) INDEX PAGE (if #hero is present)
   // ----------------------------------------------------
   if (document.querySelector('#hero')) {
     // Typewriter Effect for Tagline
@@ -51,12 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (tagline) {
       const text = 'Fourth Year Undergraduate at IIT Kanpur';
       let index = 0;
-
       function type() {
         if (index < text.length) {
           tagline.textContent += text.charAt(index);
           index++;
-          setTimeout(type, 50);
+          setTimeout(type, 40);
         }
       }
       type();
@@ -65,13 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // GSAP Animations for Hero
     gsap.from('.title', {
       duration: 1.5,
-      y: -100,
+      y: -50,
       opacity: 0,
       ease: 'power3.out'
     });
     gsap.from('.tagline', {
       duration: 1,
-      y: 50,
+      y: 30,
       opacity: 0,
       delay: 0.5,
       ease: 'power2.out'
@@ -121,18 +120,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ----------------------------------------------------
-  // 3) ABOUT SECTION (ScrollTrigger Animation)
+  // 3) ABOUT SECTION ANIMATION
   // ----------------------------------------------------
   if (document.querySelector('#about')) {
+    gsap.registerPlugin(ScrollTrigger);
     gsap.from('#about .content', {
       scrollTrigger: {
         trigger: '#about',
-        start: 'top 80%',
-        toggleActions: 'play none none reverse'
+        start: 'top 80%'
       },
       opacity: 0,
-      y: 50,
-      duration: 1.5,
+      y: 40,
+      duration: 1.2,
       ease: 'power2.out'
     });
   }
@@ -141,16 +140,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4) BLOG PAGE (if #blog is present)
   // ----------------------------------------------------
   if (document.querySelector('#blog')) {
-    // GSAP Animations for Blog Title and Cards
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate the blog title and intro text
     gsap.from('.blog-title', {
       duration: 1.5,
-      y: -50,
+      y: -40,
       opacity: 0,
       ease: 'power3.out'
     });
     gsap.from('.intro-text', {
       duration: 1,
-      x: -50,
+      x: -40,
       opacity: 0,
       delay: 0.5,
       ease: 'power2.out'
@@ -164,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ease: 'power2.out'
     });
 
-    // Read More Toggle Functionality
+    // Read More toggle
     const readMoreButtons = document.querySelectorAll('.read-more');
     readMoreButtons.forEach((button) => {
       button.addEventListener('click', () => {
@@ -183,16 +184,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5) CONTACT PAGE (if #contact is present)
   // ----------------------------------------------------
   if (document.querySelector('#contact')) {
-    // GSAP Animations for Contact Title and Form
+    gsap.registerPlugin(ScrollTrigger);
+
     gsap.from('.contact-title', {
       duration: 1.5,
-      y: -50,
+      y: -40,
       opacity: 0,
       ease: 'power3.out'
     });
     gsap.from('.contact-form', {
       duration: 1,
-      y: 50,
+      y: 40,
       opacity: 0,
       delay: 0.5,
       ease: 'power2.out'
