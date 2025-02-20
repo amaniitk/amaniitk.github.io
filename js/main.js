@@ -1,21 +1,20 @@
-// Particle Background
 particlesJS('particles-js', {
   particles: {
-    number: { value: 120 },
+    number: { value: 150 },
     color: { value: '#7c4dff' },
     shape: { type: 'circle' },
-    opacity: { value: 0.7 },
+    opacity: { value: 0.7, random: true },
     size: { value: 4, random: true },
     line_linked: { enable: true, distance: 150, color: '#7c4dff', opacity: 0.4 },
-    move: { enable: true, speed: 4 }
+    move: { enable: true, speed: 6, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false }
   },
   interactivity: {
-    events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' } },
-    modes: { grab: { distance: 200 }, push: { particles_nb: 5 } }
+    detect_on: 'canvas',
+    events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true },
+    modes: { grab: { distance: 200, line_linked: { opacity: 0.7 } }, push: { particles_nb: 4 } }
   }
 });
 
-// Typewriter Effect
 document.addEventListener('DOMContentLoaded', () => {
   const tagline = document.getElementById('tagline');
   const text = 'Fourth Year Undergraduate at IIT Kanpur';
@@ -29,19 +28,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   type();
-
-  // Scroll Animations
-  const sections = document.querySelectorAll('.section');
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
-
-  sections.forEach((section) => observer.observe(section));
 });
