@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog | Cosmic Thoughts</title>
+  <!-- Same style.css as your main site -->
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Particle Background -->
@@ -13,26 +14,40 @@
 
   <!-- Blog Section -->
   <section id="blog" class="section">
-    <h1 class="blog-title">Cosmic Thoughts</h1>
+    <h1 class="blog-title glitch-text">Cosmic Thoughts</h1>
     <p class="intro-text">Dive into my mind—where chaos meets clarity.</p>
+
     <div class="blog-content">
+      <!-- Blog Card 1 -->
       <article class="blog-card">
         <h2 class="card-title">Philosophy of the Eye</h2>
-        <p class="card-excerpt">What if the eye isn’t just a window, but a mirror reflecting the universe back at us?</p>
+        <p class="card-excerpt">
+          What if the eye isn’t just a window, but a mirror reflecting the universe back at us?
+        </p>
         <div class="card-full hidden">
-          <p>The eye—two words, infinite depth. It’s not just a tool for seeing; it’s a paradox of perception. Philosophers like Descartes called it the gateway to the soul, but what if it’s more? What if every glance shapes reality itself?</p>
-          <p>Think about it: light hits the retina, neurons fire, and suddenly a tree exists in your mind. But is it really "out there," or did your eye co-create it with the cosmos? The Greeks saw the eye as a divine spark; modern science reduces it to biology. Yet, both miss the poetry—the eye as a storyteller, weaving meaning from raw chaos.</p>
-          <p>Here’s a wild thought: when you lock eyes with someone, two universes collide. Your pupils dilate, theirs do too, and for a split second, you’re not just seeing—you’re *being seen*. That’s the real philosophy of the eye: it’s a bridge between the self and the infinite, a silent conversation with existence.</p>
+          <p>
+            The eye—two words, infinite depth. It’s not just a tool for seeing; it’s a paradox of perception. Philosophers like Descartes called it the gateway to the soul, but what if it’s more? What if every glance shapes reality itself?
+          </p>
+          <p>
+            Think about it: light hits the retina, neurons fire, and suddenly a tree exists in your mind. But is it really "out there," or did your eye co-create it with the cosmos? The Greeks saw the eye as a divine spark; modern science reduces it to biology. Yet, both miss the poetry—the eye as a storyteller, weaving meaning from raw chaos.
+          </p>
+          <p>
+            Here’s a wild thought: when you lock eyes with someone, two universes collide. Your pupils dilate, theirs do too, and for a split second, you’re not just seeing—you’re <em>being seen</em>. That’s the real philosophy of the eye: it’s a bridge between the self and the infinite, a silent conversation with existence.
+          </p>
         </div>
         <button class="read-more">Read More</button>
       </article>
     </div>
+
+    <!-- Back Button -->
     <a href="index.html" class="back-button">Back to Home</a>
   </section>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <!-- Same main.js as your main site -->
   <script src="js/main.js"></script>
 </body>
 </html>
