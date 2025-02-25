@@ -1,23 +1,23 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Space</title>
+  <title>My Space</title> -->
   <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css" />
+<!--   <link rel="stylesheet" href="css/style.css" /> -->
   <!-- Fonts -->
-  <link
+<!--   <link
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap"
     rel="stylesheet"
   />
 </head>
-<body>
+<body> -->
   <!-- Particle Background -->
-  <div id="particles-js"></div>
+<!--   <div id="particles-js"></div> -->
 
   <!-- Hero Section -->
-  <section id="hero">
+<!--   <section id="hero">
     <div class="hero-content">
       <h1 class="title">Welcome to My Space</h1>
       <p id="tagline" class="tagline"></p>
@@ -31,17 +31,17 @@
         <a href="https://topmate.io/aman_iitkanpur" class="button" target="_blank"
           >Visit My Other Site</a
         >
-      </div>
+      </div> -->
       <!-- Scroll Down Arrow -->
-      <div class="scroll-down">
+<!--       <div class="scroll-down">
         <span>Scroll Down</span>
         <div class="arrow"></div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- About Section -->
-  <section id="about">
+<!--   <section id="about">
     <div class="content">
       <h2>About Me</h2>
       <p>
@@ -50,18 +50,408 @@
         imagination.
       </p>
     </div>
-  </section>
+  </section> -->
 
   <!-- Navigation -->
-  <nav class="nav-menu">
+<!--   <nav class="nav-menu">
     <a href="blog.html" class="nav-button">Blog</a>
     <a href="contact.html" class="nav-button">Contact</a>
-  </nav>
+  </nav> -->
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!--   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aman | IIT Kanpur</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cursor -->
+  <div class="cursor-dot-outline"></div>
+  <div class="cursor-dot"></div>
+  
+  <!-- Loader -->
+  <div class="loader">
+    <div class="loader-content">
+      <div class="loader-circle"></div>
+      <div class="loader-text">Loading Experience</div>
+      <div class="loader-progress-container">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header>
+    <div class="logo">A.</div>
+    <div class="nav-toggle">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Menu -->
+  <div class="menu-overlay">
+    <nav class="menu">
+      <ul>
+        <li data-index="0"><a href="#home" class="menu-link">Home</a></li>
+        <li data-index="1"><a href="#about" class="menu-link">About</a></li>
+        <li data-index="2"><a href="#projects" class="menu-link">Projects</a></li>
+        <li data-index="3"><a href="#blog" class="menu-link">Blog</a></li>
+        <li data-index="4"><a href="#contact" class="menu-link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="social-links">
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="section active">
+      <div class="container">
+        <div class="home-content">
+          <h1 class="glitch" data-text="Aman">Aman</h1>
+          <div class="subtitle">
+            <span class="word">Developer</span>
+            <span class="word">Student</span>
+            <span class="word">Innovator</span>
+          </div>
+          <div class="tagline">Fourth Year <span class="accent">Undergraduate</span> at IIT Kanpur</div>
+          <div class="cta-buttons">
+            <a href="#" class="btn primary-btn" id="resumeBtn">View Resume</a>
+            <a href="#contact" class="btn secondary-btn">Get in Touch</a>
+          </div>
+          <div class="scroll-indicator">
+            <div class="mouse">
+              <div class="wheel"></div>
+            </div>
+            <div class="scroll-text">Scroll Down</div>
+          </div>
+        </div>
+        <div class="home-visual">
+          <div class="hero-shape"></div>
+          <canvas id="particles"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="lead">Hello! I'm a passionate technologist and problem solver currently in my fourth year at IIT Kanpur.</p>
+            <p>My journey in technology is driven by curiosity and a desire to create meaningful solutions. I believe in the power of innovation to address real-world challenges and am constantly exploring new technologies and ideas.</p>
+            <div class="skills-container">
+              <h3>Skills & Expertise</h3>
+              <div class="skills-grid">
+                <div class="skill">
+                  <div class="skill-name">Web Development</div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div class="skill">
+                  <div class="skill-name">Data Structures</div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div class="skill">
+                  <div class="skill-name">Machine Learning</div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%"></div>
+                  </div>
+                </div>
+                <div class="skill">
+                  <div class="skill-name">UI/UX Design</div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="floating-image">
+              <div class="image-wrapper">
+                <img src="/api/placeholder/400/400" alt="Aman's Profile">
+              </div>
+              <div class="floating-tech">
+                <div class="tech-icon"><i class="fab fa-react"></i></div>
+                <div class="tech-icon"><i class="fab fa-python"></i></div>
+                <div class="tech-icon"><i class="fab fa-js"></i></div>
+                <div class="tech-icon"><i class="fab fa-node-js"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Projects</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="ml">ML</button>
+          <button class="filter-btn" data-filter="research">Research</button>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img src="/api/placeholder/600/400" alt="Project 1">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Interactive Data Visualizer</h3>
+              <p class="project-desc">A web application that transforms complex datasets into interactive visualizations.</p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>D3.js</span>
+                <span>Node.js</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="ml">
+            <div class="project-image">
+              <img src="/api/placeholder/600/400" alt="Project 2">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Sentiment Analysis Tool</h3>
+              <p class="project-desc">ML-powered application that analyzes sentiment patterns in textual data.</p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>TensorFlow</span>
+                <span>NLTK</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="research">
+            <div class="project-image">
+              <img src="/api/placeholder/600/400" alt="Project 3">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="project-link"><i class="fas fa-file-pdf"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Quantum Computing Research</h3>
+              <p class="project-desc">Research on quantum algorithm optimization for practical applications.</p>
+              <div class="project-tech">
+                <span>Qiskit</span>
+                <span>Quantum Mechanics</span>
+                <span>Mathematics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="projects-cta">
+          <a href="https://github.com/" target="_blank" class="btn primary-btn">See More on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Blog</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="blog-grid">
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="/api/placeholder/600/400" alt="Blog Post 1">
+            </div>
+            <div class="blog-content">
+              <div class="blog-date">October 1, 2023</div>
+              <h3 class="blog-title">Philosophy of the Eye</h3>
+              <p class="blog-excerpt">What if the eye isn't just a window, but a mirror reflecting the universe back at us?</p>
+              <a href="#" class="blog-link">Read More</a>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="/api/placeholder/600/400" alt="Blog Post 2">
+            </div>
+            <div class="blog-content">
+              <div class="blog-date">September 15, 2023</div>
+              <h3 class="blog-title">The Future of AI Ethics</h3>
+              <p class="blog-excerpt">Exploring the ethical implications of advanced AI systems in society.</p>
+              <a href="#" class="blog-link">Read More</a>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="/api/placeholder/600/400" alt="Blog Post 3">
+            </div>
+            <div class="blog-content">
+              <div class="blog-date">August 22, 2023</div>
+              <h3 class="blog-title">Welcome to My Blog</h3>
+              <p class="blog-excerpt">My first post sharing my journey, tech experiments, and random musings.</p>
+              <a href="#" class="blog-link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="blog-cta">
+          <a href="#" class="btn secondary-btn">View All Posts</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Get in Touch</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="contact-content">
+          <div class="contact-form-container">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn primary-btn">Send Message</button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info-content">
+                <h3>Location</h3>
+                <p>IIT Kanpur, Uttar Pradesh, India</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="info-content">
+                <h3>Email</h3>
+                <p>your.email@example.com</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-link"></i>
+              </div>
+              <div class="info-content">
+                <h3>Connect</h3>
+                <div class="connect-links">
+                  <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Resume Modal -->
+  <div class="modal" id="resumeModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>My Resume</h2>
+      <div class="resume-container">
+        <iframe src="https://drive.google.com/file/d/1h2Fg1mIisHburRiIf6tZXcThBkhT70zc/preview" width="100%" height="500"></iframe>
+      </div>
+      <div class="modal-footer">
+        <a href="https://drive.google.com/file/d/1h2Fg1mIisHburRiIf6tZXcThBkhT70zc/view?usp=sharing" target="_blank" class="btn primary-btn">Download PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle"></i>
+      <div class="toast-message">Message sent successfully!</div>
+    </div>
+    <div class="toast-progress"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">A.</div>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Aman. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
   <script src="js/main.js"></script>
 </body>
 </html>
