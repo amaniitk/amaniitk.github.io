@@ -62,83 +62,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blog | Aman IIT Kanpur</title>
-  
-  <!-- Preload critical assets -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" as="style" />
-  <link rel="preload" href="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" as="script" />
-  
+  <title>Blog | Cosmic Thoughts</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap"
-    rel="stylesheet"
-  />
-  
-  <!-- Loading Screen -->
-  <style>
-    .loading-screen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #0a0a0a;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      transition: opacity 0.5s ease-out;
-    }
-    .loading-container {
-      text-align: center;
-    }
-    .loading-progress {
-      font-size: 5rem;
-      font-family: 'Orbitron', sans-serif;
-      color: #fff;
-      margin-bottom: 20px;
-    }
-    .loading-bar {
-      width: 200px;
-      height: 4px;
-      background: #1a1a1a;
-      margin: 0 auto;
-      position: relative;
-      overflow: hidden;
-      border-radius: 2px;
-    }
-    .loading-bar-fill {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 0%;
-      background: linear-gradient(90deg, #7c4dff, #800020);
-      transition: width 0.3s ease-out;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+  <meta name="description" content="Blog posts exploring technology, philosophy, and creative ideas">
 </head>
 <body>
-  <!-- Loading Screen -->
-  <div class="loading-screen" id="loading-screen">
-    <div class="loading-container">
-      <div class="loading-progress" id="loading-percentage">0%</div>
-      <div class="loading-bar">
-        <div class="loading-bar-fill" id="loading-bar-fill"></div>
-      </div>
-    </div>
-  </div>
-
   <!-- Particle Background -->
   <div id="particles-js"></div>
+  
   <!-- Blog Section -->
   <section id="blog" class="section">
     <h1 class="blog-title glitch-text">Cosmic Thoughts</h1>
     <p class="intro-text">Dive into my mind—where chaos meets clarity.</p>
+    
     <div class="blog-content">
       <!-- Example Blog Card -->
       <article class="blog-card">
-        <h2 class="card-title">Philosophy of the Eye</h2>
+        <div class="card-header">
+          <h2 class="card-title">Philosophy of the Eye</h2>
+          <div class="card-date">February 15, 2025</div>
+        </div>
         <p class="card-excerpt">
           What if the eye isn't just a window, but a mirror reflecting the universe back at us?
         </p>
@@ -161,11 +105,52 @@
             with existence.
           </p>
         </div>
-        <button class="read-more">Read More</button>
+        <button class="read-more">
+          <span>Read More</span>
+          <div class="button-effect"></div>
+        </button>
+      </article>
+      
+      <!-- Second Blog Card -->
+      <article class="blog-card">
+        <div class="card-header">
+          <h2 class="card-title">Digital Reality</h2>
+          <div class="card-date">February 20, 2025</div>
+        </div>
+        <p class="card-excerpt">
+          Where does consciousness end and digital existence begin? Exploring the boundaries of virtual identity.
+        </p>
+        <div class="card-full hidden">
+          <p>
+            We're living in two worlds now—the physical and the digital. Our thoughts flow seamlessly between them,
+            but what happens to our sense of self in this transition? As we upload more of our memories, ideas, and
+            social interactions to digital spaces, parts of us begin to exist outside our bodies.
+          </p>
+          <p>
+            This isn't just philosophical speculation; it's becoming our daily reality. When was the last time you
+            relied completely on your brain for remembering an important date? Google likely knows more about your
+            search habits than you do. Your digital footprint persists and grows, evolving into something like a
+            second consciousness.
+          </p>
+          <p>
+            The question isn't whether digital extensions of ourselves are real—they undeniably impact our world and
+            others. The real question is how this dual existence will reshape what it means to be human. As our physical
+            and digital selves converge, we may need to expand our understanding of identity beyond the boundaries of flesh.
+          </p>
+        </div>
+        <button class="read-more">
+          <span>Read More</span>
+          <div class="button-effect"></div>
+        </button>
       </article>
     </div>
-    <a href="index.html" class="back-button">Back to Home</a>
+    
+    <a href="index.html" class="back-button">
+      <span>Back to Home</span>
+      <div class="button-effect"></div>
+    </a>
   </section>
+  
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
