@@ -96,6 +96,7 @@ header {
 }
 
 /* --------------------------- HERO SECTION --------------------------- */
+/* --------------------------- HERO SECTION --------------------------- */
 .hero {
   display: flex;
   justify-content: center;
@@ -109,35 +110,27 @@ header {
   text-align: center;
 }
 
-/* Hero Title and Subtitle Animations */
-.hero-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  animation: fadeInDown 1s forwards;
+/* Profile picture styling */
+.profile-pic {
+  width: 120px;                 /* Set a reasonable width */
+  height: 120px;                /* Matching height for a perfect circle */
+  border-radius: 50%;           /* Makes the image circular */
+  object-fit: cover;            /* Ensures the image fills the container */
+  margin: 0 auto 1rem auto;     /* Centers the image & adds space below */
+  border: 2px solid #fff;       /* Optional white border (thicker) */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+  display: block;               /* Ensures margins apply correctly */
 }
 
-.hero-subtitle {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
-  animation: fadeInUp 1s forwards 0.4s;
-}
-.profile-pic {
-  width: 40px;                 /* Adjust as needed */
-  height: 40px;                /* Keep it square for a perfect circle */
-  border-radius: 50%;           /* This makes it circular */
-  object-fit: cover;            /* Ensures the image fills the container */
-  margin-bottom: 1px;          /* Spacing below the image */
-  border: 0.5px solid #fff;       /* Optional white border */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
-}
+/* Optional: On very small screens, you can slightly reduce the pic size */
 @media (max-width: 480px) {
   .profile-pic {
     width: 100px;
     height: 100px;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
   }
 }
+
 /* ------------------------- BUTTON STYLES ------------------------- */
 .buttons {
   display: flex;
