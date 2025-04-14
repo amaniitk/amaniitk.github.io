@@ -1,21 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.getElementById("theme-toggle");
-  const themeIcon = document.getElementById("theme-icon");
 
-  // Check saved theme preference in localStorage
+  // Check saved theme preference in localStorage and update toggle state
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-theme");
-    themeIcon.src = "assets/images/moon.svg";
+    themeToggle.checked = true;
   }
 
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-theme");
-
-    if (document.body.classList.contains("dark-theme")) {
-      themeIcon.src = "assets/images/moon.svg";
+  themeToggle.addEventListener("change", () => {
+    if (themeToggle.checked) {
+      // Switch to dark theme
+      document.body.classList.add("dark-theme");
       localStorage.setItem("theme", "dark");
     } else {
-      themeIcon.src = "assets/images/sun.svg";
+      // Switch to light theme
+      document.body.classList.remove("dark-theme");
       localStorage.setItem("theme", "light");
     }
   });
