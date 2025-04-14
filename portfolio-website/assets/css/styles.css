@@ -1,153 +1,173 @@
-/* ---------------------- RESET & BASIC STYLES ---------------------- */
+/* RESET some default styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* FONT & BASIC BODY STYLING */
 body {
   font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  background: var(--bg-color);
+  overflow-x: hidden; /* Prevent horizontal scroll for big animations */
   transition: background-color 0.3s, color 0.3s;
+  position: relative;
 }
 
-/* ------------------- THEME COLORS (Light & Dark) -------------------- */
-/* Default Light Theme Colors */
+/* LIGHT THEME COLORS */
 :root {
-  --bg-color: #fefefe;
+  --bg-color: #ffffff;
   --text-color: #333333;
   --primary-color: #3498db;
   --btn-bg: #3498db;
   --btn-text: #ffffff;
-  /* Background gradient for hero section */
-  --hero-gradient: linear-gradient(135deg, #ffffff 0%, #f3f3f3 100%);
+
+  /* ANIMATED BACKGROUND (LIGHT) */
+  --gradient-start: #d7e4f5;
+  --gradient-mid: #fde8f9;
+  --gradient-end: #fffcf2;
 }
 
-/* Dark Theme Colors */
+/* DARK THEME OVERRIDES */
 body.dark-theme {
-  --bg-color: #1e1e1e;
-  --text-color: #fefefe;
+  --bg-color: #1f1f1f;
+  --text-color: #ffffff;
   --primary-color: #2980b9;
   --btn-bg: #2980b9;
   --btn-text: #ffffff;
-  /* Dark gradient background for hero section */
-  --hero-gradient: linear-gradient(135deg, #2e2e2e 0%, #1e1e1e 100%);
+
+  /* ANIMATED BACKGROUND (DARK) */
+  --gradient-start: #232931;
+  --gradient-mid: #262261;
+  --gradient-end: #303960;
 }
 
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+/* ANIMATED GRADIENT BACKGROUND (SPANS FULL SCREEN) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    var(--gradient-start),
+    var(--gradient-mid),
+    var(--gradient-end)
+  );
+  background-size: cover;
+  z-index: -1; /* Put behind page content */
+  animation: gradientAnimation 15s ease infinite;
 }
 
-/* ----------------------- HEADER & THEME SWITCH ----------------------- */
+/* GRADIENT KEYFRAMES */
+@keyframes gradientAnimation {
+  0% {
+    background: radial-gradient(
+      circle,
+      var(--gradient-start),
+      var(--gradient-mid),
+      var(--gradient-end)
+    );
+  }
+  50% {
+    background: radial-gradient(
+      circle,
+      var(--gradient-mid),
+      var(--gradient-end),
+      var(--gradient-start)
+    );
+  }
+  100% {
+    background: radial-gradient(
+      circle,
+      var(--gradient-start),
+      var(--gradient-mid),
+      var(--gradient-end)
+    );
+  }
+}
+
+/* HEADER STYLING */
 header {
   display: flex;
   justify-content: flex-end;
   padding: 1rem;
 }
 
-/* Slider Toggle Switch Styles */
-.theme-switch {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.theme-switch input[type="checkbox"] {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.theme-switch .slider {
-  position: relative;
-  width: 50px;
-  height: 26px;
-  background-color: #ccc;
-  border-radius: 15px;
+/* THEME TOGGLE BUTTON */
+#theme-toggle {
+  background: none;
+  border: none;
   cursor: pointer;
-  transition: 0.4s;
+  outline: none;
+  width: 36px;
+  height: 36px;
 }
 
-/* The moving circle */
-.theme-switch .slider::before {
-  content: "";
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  left: 3px;
-  bottom: 3px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  transition: 0.4s;
-}
-
-.theme-switch input:checked + .slider::before {
-  transform: translateX(24px);
-}
-
-.theme-switch input:checked + .slider {
-  background-color: var(--primary-color);
-}
-
-/* Style for the textual labels */
-.theme-label {
-  font-size: 0.9rem;
-  user-select: none;
-}
-
-/* --------------------------- HERO SECTION --------------------------- */
+/* HERO SECTION */
 .hero {
+  min-height: 80vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
-  background: var(--hero-gradient);
+  text-align: center;
   padding: 2rem;
 }
 
-.hero-content {
-  text-align: center;
+/* PROFILE IMAGE */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
-/* Hero Title and Subtitle Animations */
 .hero-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  animation: fadeInDown 1s forwards;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeInDown 1s forwards 0.3s;
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
   max-width: 600px;
-  margin: 0 auto 2rem auto;
-  animation: fadeInUp 1s forwards 0.4s;
+  opacity: 0;
+  animation: fadeInUp 1s forwards 0.5s;
 }
 
-/* ------------------------- BUTTON STYLES ------------------------- */
+/* BUTTON GROUP */
 .buttons {
+  margin-top: 1.5rem;
   display: flex;
   gap: 1rem;
-  justify-content: center;
-  margin-top: 1.5rem;
 }
 
+/* BUTTON STYLING */
 .btn {
   text-decoration: none;
   padding: 0.75rem 1.5rem;
+  border-radius: 25px;
   background-color: var(--btn-bg);
   color: var(--btn-text);
-  border-radius: 25px;
   font-weight: 600;
   transition: 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
+/* NEON HOVER EFFECT */
 .btn:hover {
   box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
 }
 
-/* --------------------------- MAIN CONTENT --------------------------- */
+/* MAIN CONTENT AREA (FOR contact.html) */
 main {
   padding: 2rem;
   max-width: 800px;
@@ -155,22 +175,30 @@ main {
   text-align: center;
 }
 
+/* SPACING BETWEEN SECTIONS */
 section {
   margin-bottom: 2rem;
 }
 
+/* HEADINGS */
 h1, h2 {
   margin-bottom: 1rem;
 }
 
-/* ------------------------------ FOOTER ------------------------------ */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
 }
 
-/* ------------------------------ ANIMATIONS ------------------------------ */
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeInDown {
   0% {
     transform: translateY(-20px);
