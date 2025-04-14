@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Your Name</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Contact Me</h1>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About, Resume &amp; Contact</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <button id="theme-toggle" title="Toggle Theme">
+        <img id="theme-icon" src="assets/images/sun.svg" alt="Toggle Theme" />
+      </button>
+    </header>
 
-        <section class="contact-info">
-            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
-            <p>GitHub: <a href="#">github.com/yourusername</a></p>
-        </section>
+    <main>
+      <!-- About Section -->
+      <section class="about">
+        <h2>About Me</h2>
+        <p>
+          I am a creative and driven [Your Profession]. I specialize in innovative designs and interactive web experiences. With a keen eye for details, I build websites that are not only visually stunning but also engaging and user-friendly.
+        </p>
+      </section>
 
-        <a href="index.html" class="btn">Back to Home</a>
+      <!-- Resume Section -->
+      <section class="resume">
+        <h2>Resume</h2>
+        <a href="resume.pdf" class="btn" target="_blank" download>Download Resume</a>
+      </section>
 
-        <button id="theme-toggle">Toggle Theme</button>
-    </div>
+      <!-- Contact Section -->
+      <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>
+          LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a>
+        </p>
+      </section>
+      
+      <!-- Back Home Button -->
+      <a href="index.html" class="btn">Back to Home</a>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+    </footer>
 
     <script src="assets/js/script.js"></script>
-</body>
+  </body>
 </html>
