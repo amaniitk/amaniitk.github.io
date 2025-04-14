@@ -1,51 +1,113 @@
-/* Reset some default styling */
+/* RESET some default styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* FONT & BASIC BODY STYLING */
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background: var(--bg-color);
+  overflow-x: hidden; /* Prevent horizontal scroll for big animations */
+  transition: background-color 0.3s, color 0.3s;
+  position: relative;
 }
 
-/* Light theme colors */
+/* LIGHT THEME COLORS */
 :root {
-  --bg-color: #fefefe;
-  --text-color: #333;
+  --bg-color: #ffffff;
+  --text-color: #333333;
   --primary-color: #3498db;
   --btn-bg: #3498db;
-  --btn-text: #fff;
+  --btn-text: #ffffff;
+
+  /* ANIMATED BACKGROUND (LIGHT) */
+  --gradient-start: #d7e4f5;
+  --gradient-mid: #fde8f9;
+  --gradient-end: #fffcf2;
 }
 
-/* Dark theme colors */
+/* DARK THEME OVERRIDES */
 body.dark-theme {
-  --bg-color: #1e1e1e;
-  --text-color: #fefefe;
+  --bg-color: #1f1f1f;
+  --text-color: #ffffff;
   --primary-color: #2980b9;
   --btn-bg: #2980b9;
-  --btn-text: #fff;
+  --btn-text: #ffffff;
+
+  /* ANIMATED BACKGROUND (DARK) */
+  --gradient-start: #232931;
+  --gradient-mid: #262261;
+  --gradient-end: #303960;
 }
 
-/* Header styling */
+/* ANIMATED GRADIENT BACKGROUND (SPANS FULL SCREEN) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    var(--gradient-start),
+    var(--gradient-mid),
+    var(--gradient-end)
+  );
+  background-size: cover;
+  z-index: -1; /* Put behind page content */
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* GRADIENT KEYFRAMES */
+@keyframes gradientAnimation {
+  0% {
+    background: radial-gradient(
+      circle,
+      var(--gradient-start),
+      var(--gradient-mid),
+      var(--gradient-end)
+    );
+  }
+  50% {
+    background: radial-gradient(
+      circle,
+      var(--gradient-mid),
+      var(--gradient-end),
+      var(--gradient-start)
+    );
+  }
+  100% {
+    background: radial-gradient(
+      circle,
+      var(--gradient-start),
+      var(--gradient-mid),
+      var(--gradient-end)
+    );
+  }
+}
+
+/* HEADER STYLING */
 header {
   display: flex;
   justify-content: flex-end;
   padding: 1rem;
 }
 
-/* Theme toggle button (no border/background) */
+/* THEME TOGGLE BUTTON */
 #theme-toggle {
   background: none;
   border: none;
   cursor: pointer;
   outline: none;
+  width: 36px;
+  height: 36px;
 }
 
-/* Hero Section */
+/* HERO SECTION */
 .hero {
   min-height: 80vh;
   display: flex;
@@ -53,56 +115,108 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
 }
 
+/* PROFILE IMAGE */
 .profile-img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  margin-bottom: 1rem;
   object-fit: cover;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
-/* Button container */
+.hero-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeInDown 1s forwards 0.3s;
+}
+
+.hero-subtitle {
+  max-width: 600px;
+  opacity: 0;
+  animation: fadeInUp 1s forwards 0.5s;
+}
+
+/* BUTTON GROUP */
 .buttons {
   margin-top: 1.5rem;
   display: flex;
   gap: 1rem;
 }
 
-/* Buttons styling */
+/* BUTTON STYLING */
 .btn {
   text-decoration: none;
   padding: 0.75rem 1.5rem;
+  border-radius: 25px;
   background-color: var(--btn-bg);
   color: var(--btn-text);
-  border-radius: 50px;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
+/* NEON HOVER EFFECT */
 .btn:hover {
-  background-color: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
 }
 
-/* Footer styling */
+/* MAIN CONTENT AREA (FOR contact.html) */
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* SPACING BETWEEN SECTIONS */
+section {
+  margin-bottom: 2rem;
+}
+
+/* HEADINGS */
+h1, h2 {
+  margin-bottom: 1rem;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
 }
 
-/* Main content area (for contact.html) */
-main {
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
-section {
-  margin-bottom: 2rem;
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-h1, h2 {
-  margin-bottom: 1rem;
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
