@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Hi, I'm <span>Your Name</span></h1>
-            <p>Welcome to my personal portfolio!</p>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Optionally load a Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header with theme toggle button -->
+    <header>
+      <button id="theme-toggle" title="Toggle Theme">
+        <img id="theme-icon" src="assets/images/sun.svg" alt="Toggle Theme" />
+      </button>
+    </header>
 
-        <nav>
-            <a href="https://your-other-website.com" target="_blank" class="btn">My Other Website</a>
-            <a href="resume.pdf" target="_blank" class="btn">View Resume</a>
-            <a href="contact.html" class="btn">Contact Me</a>
-        </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+      <!-- Optional profile image -->
+      <img src="assets/images/profile.jpg" alt="Profile Picture" class="profile-img" />
+      <h1>Hi, I'm [Your Name]</h1>
+      <p>
+        Welcome to my personal portfolio. I'm a [your profession/role] passionate about creative design and development.
+      </p>
+      <div class="buttons">
+        <!-- Button to external website -->
+        <a href="https://yourotherwebsite.com" target="_blank" class="btn">Visit My Other Website</a>
+        <!-- Button to info page -->
+        <a href="contact.html" class="btn">About &amp; Contact</a>
+      </div>
+    </section>
 
-        <button id="theme-toggle">Toggle Theme</button>
-    </div>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+    </footer>
 
+    <!-- Link to external JavaScript -->
     <script src="assets/js/script.js"></script>
-</body>
+  </body>
 </html>
