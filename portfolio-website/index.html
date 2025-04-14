@@ -2,48 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <!-- Google Font Example -->
+    <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <!-- Header with theme toggle button -->
+    <!-- Header with slider toggle switch -->
     <header>
-      <button id="theme-toggle" title="Toggle Theme">
-        <img id="theme-icon" src="assets/images/sun.svg" alt="Toggle Theme" />
-      </button>
+      <label class="theme-switch">
+        <span class="theme-label left-label">Light</span>
+        <input type="checkbox" id="theme-toggle" />
+        <span class="slider"></span>
+        <span class="theme-label right-label">Dark</span>
+      </label>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with minimalistic formal background -->
     <section class="hero">
-      <!-- Optional profile image -->
-      <img
-        src="assets/images/profile.jpg"
-        alt="Profile Picture"
-        class="profile-img"
-      />
-      <h1 class="hero-title">Hi, I'm <span>[Your Name]</span></h1>
-      <p class="hero-subtitle">
-        Welcome to my personal portfolio. I’m a <strong>[Your Profession]</strong>
-        who loves creating immersive, modern, and interactive web experiences.
-      </p>
-
-      <div class="buttons">
-        <!-- Button to external website -->
-        <a
-          href="https://yourotherwebsite.com"
-          target="_blank"
-          class="btn"
-          >Visit My Other Website</a
-        >
-        <!-- Button to info page -->
-        <a href="contact.html" class="btn">About &amp; Contact</a>
+      <!-- You can optionally include a profile image here -->
+      <div class="hero-content">
+        <h1 class="hero-title">Hi, I'm [Your Name]</h1>
+        <p class="hero-subtitle">
+          Welcome to my creative portfolio. I am a <strong>[Your Profession]</strong> passionate about innovative design and interactive experiences.
+        </p>
+        <div class="buttons">
+          <!-- Button to your other website -->
+          <a href="https://yourotherwebsite.com" target="_blank" class="btn">Visit My Other Website</a>
+          <!-- Button to the About & Contact page -->
+          <a href="contact.html" class="btn">About &amp; Contact</a>
+        </div>
       </div>
     </section>
 
@@ -52,7 +45,6 @@
       <p>&copy; 2025 [Your Name]. All rights reserved.</p>
     </footer>
 
-    <!-- External JavaScript -->
     <script src="assets/js/script.js"></script>
   </body>
 </html>
