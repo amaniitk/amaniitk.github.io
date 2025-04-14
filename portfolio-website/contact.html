@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About, Resume &amp; Contact</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link
@@ -12,9 +12,12 @@
   </head>
   <body>
     <header>
-      <button id="theme-toggle" title="Toggle Theme">
-        <img id="theme-icon" src="assets/images/sun.svg" alt="Toggle Theme" />
-      </button>
+      <label class="theme-switch">
+        <span class="theme-label left-label">Light</span>
+        <input type="checkbox" id="theme-toggle" />
+        <span class="slider"></span>
+        <span class="theme-label right-label">Dark</span>
+      </label>
     </header>
 
     <main>
@@ -22,10 +25,7 @@
       <section class="about">
         <h2>About Me</h2>
         <p>
-          I’m a passionate and curious <strong>[Your Profession]</strong>.
-          I specialize in modern, creative website designs and interactive
-          user experiences. I love pushing boundaries to deliver captivating
-          interfaces that engage and delight users.
+          I am a dedicated <strong>[Your Profession]</strong> specializing in modern, creative website design and engaging user experiences.
         </p>
       </section>
 
@@ -39,14 +39,10 @@
       <section class="contact">
         <h2>Contact</h2>
         <p>
-          Email:
-          <a href="mailto:your.email@example.com">your.email@example.com</a>
+          Email: <a href="mailto:your.email@example.com">your.email@example.com</a>
         </p>
         <p>
-          LinkedIn:
-          <a href="https://linkedin.com/in/yourprofile" target="_blank"
-            >LinkedIn Profile</a
-          >
+          LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a>
         </p>
       </section>
 
