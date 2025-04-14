@@ -123,13 +123,20 @@ header {
   animation: fadeInUp 1s forwards 0.4s;
 }
 .profile-pic {
-  width: 150px;                 /* Adjust as needed */
-  height: 150px;                /* Keep it square for a perfect circle */
+  width: 40px;                 /* Adjust as needed */
+  height: 40px;                /* Keep it square for a perfect circle */
   border-radius: 50%;           /* This makes it circular */
   object-fit: cover;            /* Ensures the image fills the container */
-  margin-bottom: 20px;          /* Spacing below the image */
-  border: 3px solid #fff;       /* Optional white border */
+  margin-bottom: 1px;          /* Spacing below the image */
+  border: 0.5px solid #fff;       /* Optional white border */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+@media (max-width: 480px) {
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+  }
 }
 /* ------------------------- BUTTON STYLES ------------------------- */
 .buttons {
