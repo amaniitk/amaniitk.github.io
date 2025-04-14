@@ -30,7 +30,7 @@ body.dark-theme {
   --btn-bg: #2980b9;
   --btn-text: #ffffff;
   /* Dark gradient background for hero section */
-  --hero-gradient: linear-gradient(135deg, #2e2e2e 0%, #1e1e1e 100%);
+  --hero-gradient: linear-gradient(#1e1e1e 100%);
 }
 
 body {
