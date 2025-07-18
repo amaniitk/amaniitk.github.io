@@ -30,7 +30,9 @@ body.dark-theme {
   --btn-bg: #2980b9;
   --btn-text: #ffffff;
   /* Dark gradient background for hero section */
-  --hero-gradient: linear-gradient(#1e1e1e 100%);
+/*   --hero-gradient: linear-gradient(#1e1e1e 100%); */
+/* This is the correct way to make a solid background with linear-gradient */
+--hero-gradient: linear-gradient(#1e1e1e, #1e1e1e);
 }
 
 body {
